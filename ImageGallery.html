@@ -1,108 +1,36 @@
 <!--Image gallery rotation and zoom effect-->
 <!--please download imgaes from img folder-->
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>Image Gallery</title>
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-    
-            }
-            /* .image-gallery{
-                display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-gap: 10px;
-            background-color: #2196F3;
-            padding: 10px;
-            } */
-            /* .image-gallery img{
-                
-                text-align: center;
-                padding: 20px 0;
-                font-size: 30px;
-                width: 100%;
-                height: 100%;
-            } */
-            .image-gallery{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr; 
-                /* margin: 70px auto 50px; */
-                
-                
-            }
-            .image-gallery img{
-                width: 90%;
-                height: 300px;
-                margin:20px; 
-                background-position: center;
-                background-size: cover;
-                transition: transform 0.5s;
-                
-            }
-            .image-gallery img:hover{
-                transform: scale(0.8) rotate(-15deg);
-                border-radius: 20px;
-                box-shadow: 20px 20px rgba(68,77,136,0.2);
-
-            }
-            .full-img{
-                width: 100%;
-                height: 100vh;
-                background:rgba(0,0,0,0.9);
-                position: fixed;
-                display: none;
-                z-index: 100;
-                
-                
-            }
-            .full-img img{
-                position: absolute;
-                top: 25%;
-                left: 35%;
-                width: 500px;
-                height: 400px;
-                
-            }
-            .full-img span{
-                position: absolute;
-                top: 5%;
-                right: 5%;
-                color: white;
-                font-size: 30px;
-                cursor: pointer;
-            }
-
-
-        </style>
-    </head>
-    <body>
-        <div class="full-img" id="full-img-box">
-            <img src="img/img1.jpg" alt="img1" id="full-img">
-            <span onclick="closeFullImg()">X</span>
-        </div>
-        <div class="image-gallery">
-            <img src="img/img1.jpg" alt="img1" onclick="openFullImg(this.src)">
-            <img src="img/img2.jpg" alt="img2" onclick="openFullImg(this.src)">
-            <img src="img/img3.jpg" alt="img3" onclick="openFullImg(this.src)">
-            <img src="img/img4.jpg" alt="img4" onclick="openFullImg(this.src)">
-            <img src="img/img5.jpg" alt="img5" onclick="openFullImg(this.src)">
-            <img src="img/img6.jpg" alt="img6" onclick="openFullImg(this.src)">
-            <img src="img/img7.jpg" alt="img5" onclick="openFullImg(this.src)">
-            <img src="img/img8.jpg" alt="img6" onclick="openFullImg(this.src)">
-        </div>
-    
-    </body>
-    <script>
-        full_img_box=document.getElementById('full-img-box');
-        full_img=document.getElementById('full-img')
-        function openFullImg(src){
-            full_img_box.style.display="block";
-            full_img.src=src;
-        }
-        function closeFullImg(){
-            full_img_box.style.display="none";
-        }
-    </script>
+  <head>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="ImageGallery.css" />
+  </head>
+  <body>
+    <div class="full-img" id="full-img-box">
+      <img src="img/img1.jpg" alt="img1" id="full-img" />
+      <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="image-gallery">
+      <img src="img/img1.jpg" alt="img1" onclick="openFullImg(this.src)" />
+      <img src="img/img2.jpg" alt="img2" onclick="openFullImg(this.src)" />
+      <img src="img/img3.jpg" alt="img3" onclick="openFullImg(this.src)" />
+      <img src="img/img4.jpg" alt="img4" onclick="openFullImg(this.src)" />
+      <img src="img/img5.jpg" alt="img5" onclick="openFullImg(this.src)" />
+      <img src="img/img6.jpg" alt="img6" onclick="openFullImg(this.src)" />
+      <img src="img/img7.jpg" alt="img5" onclick="openFullImg(this.src)" />
+      <img src="img/img8.jpg" alt="img6" onclick="openFullImg(this.src)" />
+    </div>
+  </body>
+  <script>
+    full_img_box = document.getElementById("full-img-box");
+    full_img = document.getElementById("full-img");
+    function openFullImg(src) {
+      full_img_box.style.display = "block";
+      full_img.src = src;
+    }
+    function closeFullImg() {
+      full_img_box.style.display = "none";
+    }
+  </script>
 </html>
